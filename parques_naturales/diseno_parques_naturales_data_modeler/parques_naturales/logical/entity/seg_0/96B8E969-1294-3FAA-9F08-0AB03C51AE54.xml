@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="96B8E969-1294-3FAA-9F08-0AB03C51AE54" name="ESPECIE_ANIMAL">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:28:42 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nombre_cientifico" id="A3AFFD41-B5AA-D914-AF94-5683FE7E37BC">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:28:55 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_comun" id="D19591B0-4D5D-E357-4B62-099ABF19E985">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:30:20 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="esperanza_vida" id="40F20363-BA24-D178-85BD-68094263792B">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:30:34 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A4B8BFDF-51FA-9A58-47B1-9317CD373BA1" name="ESPECIE_ANIMAL PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:29:16 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A3AFFD41-B5AA-D914-AF94-5683FE7E37BC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

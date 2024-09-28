@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRESIDENTE" directorySegmentName="seg_0" id="BA0689AD-993A-6D99-4852-98AC47C5F049">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:43:01 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<sourcePk>3B4EE582-212C-DC0E-F93E-51F6C1CE7AC0</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>ser presidente</nameOnSource>
+<nameOnTarget>tener presidente</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D6A35748-8E97-4160-7BBE-41CDD1C3CC17</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>AC219D0C-5EA1-633F-F6C6-29BC178026D2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

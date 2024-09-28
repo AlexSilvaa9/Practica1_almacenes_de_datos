@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="7D13BD26-4C3B-2C2B-418E-03CAE574C220" mainViewID="AF203621-4AC0-1442-9D45-0A80C92CB2CD">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:12:16 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

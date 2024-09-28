@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ESPECIE_ANIMAL_PARQUE_ESPECIE" directorySegmentName="seg_0" id="0E8C985B-7278-C84A-5C10-F93BD451C3E5">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:38:04 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<sourcePk>A4B8BFDF-51FA-9A58-47B1-9317CD373BA1</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>96B8E969-1294-3FAA-9F08-0AB03C51AE54</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B7EF7C79-7AEB-3CD3-F4ED-0D34FCB5AEF1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

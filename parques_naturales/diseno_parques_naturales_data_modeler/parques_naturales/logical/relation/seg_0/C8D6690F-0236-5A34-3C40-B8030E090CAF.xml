@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CONSEJERO" directorySegmentName="seg_0" id="C8D6690F-0236-5A34-3C40-B8030E090CAF">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:41:58 UTC</createdTime>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<engineerTo>
+<item key="7D13BD26-4C3B-2C2B-418E-03CAE574C220" value="true"/>
+</engineerTo>
+<sourcePk>1B2D264A-9A91-DDBD-4EBE-59A77BC56C84</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>ser consejero</nameOnSource>
+<nameOnTarget>tener_consejero</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AC219D0C-5EA1-633F-F6C6-29BC178026D2</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D6A35748-8E97-4160-7BBE-41CDD1C3CC17</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

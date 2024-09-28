@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3C6B461E-80CD-127B-9D49-F7A65FBE8760" name="PARQUE_ESPECIE">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>B7EF7C79-7AEB-3CD3-F4ED-0D34FCB5AEF1</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="extension" id="3A6229FD-A2D3-5EA4-02F7-AD01B6D1FB11">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>B8A7BB18-BFCA-1D2D-E985-FA525B798D6C</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="poblacion_estimada" id="9FEDA21E-C7B0-37B1-8AE6-5711885DC60A">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>94B0B7B9-635C-8B86-3D2D-6444B815BA0F</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="is_superpoblado" id="3C754569-55B0-283A-7EEF-942C9999FCB9">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>FBF67DC7-6479-DAE0-2DF6-E4AA1805C818</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PARQUE_NATURAL_nombre" id="407786E5-C79C-6093-B4B9-62E35A28CB55">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>395B1A77-59E5-7499-1C74-1275A2B7EAA8</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E21C8A9F-F07F-6330-4BB8-46F94A3135DE" referredColumn="15A9850C-ED81-D347-C01E-4E654B6BD32A"/>
+</associations>
+</Column>
+<Column name="ESPECIE_ANIMAL_nombre_cientifico" id="EE499820-A070-B61A-0DD3-D8F5CBCDCED7">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>7C1CD897-CC89-3B5D-D7C6-9F933924525E</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62E9D701-D17F-861A-EC99-526EB425A198" referredColumn="A549B4C1-3449-940A-3D3F-D85B552E725A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BD4737D9-C3F1-5AF1-354A-F9BD44989F2F" name="PARQUE_ESPECIE_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>AD91FEFD-D276-D12C-D885-E7E3C9755363</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="407786E5-C79C-6093-B4B9-62E35A28CB55"/>
+<colUsage columnID="EE499820-A070-B61A-0DD3-D8F5CBCDCED7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A2BCB20-1BBD-B40B-7ABC-2F8313C208B2" name="PARQUE_ESPECIE_ESPECIE_ANIMAL_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>0E8C985B-7278-C84A-5C10-F93BD451C3E5</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE499820-A070-B61A-0DD3-D8F5CBCDCED7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F40BB1F-8CB2-14AD-1ADD-C9FFB2D62745" name="PARQUE_ESPECIE_PARQUE_NATURAL_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>06044072-2200-2B6F-23C8-A531B18CC9F2</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="407786E5-C79C-6093-B4B9-62E35A28CB55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F1B2C5D9-58DD-4D5F-65E3-A944EED44835" name="PERSONA">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>D6A35748-8E97-4160-7BBE-41CDD1C3CC17</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="dni" id="C6FAAD84-ABDE-F444-4F23-D15D71E8F51F">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>6C219121-7434-DDFE-724D-E0FC9B65C4C0</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="0991F857-56BF-8100-3A8A-39754B9D4CEC">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>6A0F1829-0BFC-0E59-F6C3-36D00B9262B9</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="A6C92E68-DE2A-8ED6-A851-4140EC4B7C34">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>C8324FD2-D44B-97D1-5D57-AF6B02ECA3BC</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nacimiento" id="ACA04BEB-FCAF-A42F-0CD5-826F91F42AFE">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>11BA7849-C389-6811-D165-0C030EA97985</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PARQUE_NATURAL_nombre" id="17BD39E2-78FA-2AFE-A20A-FA09E08E8DD0">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>03F09757-2654-3050-F8E5-633C33BAC0B2</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7D1E790E-0C7A-1501-FB3D-539915F875A7" referredColumn="15A9850C-ED81-D347-C01E-4E654B6BD32A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFD1E549-F43F-17BA-B9D7-CB3010BB2B33" name="PERSONA_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>3B4EE582-212C-DC0E-F93E-51F6C1CE7AC0</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6FAAD84-ABDE-F444-4F23-D15D71E8F51F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8294CED5-F0F4-1CEF-ED43-D4C45CAB5B16" name="PERSONA_PARQUE_NATURAL_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-09-28 16:46:08 UTC</createdTime>
+<generatorID>C8D6690F-0236-5A34-3C40-B8030E090CAF</generatorID>
+<ownerDesignName>parques_naturales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17BD39E2-78FA-2AFE-A20A-FA09E08E8DD0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
