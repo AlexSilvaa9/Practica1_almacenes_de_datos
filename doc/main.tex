@@ -1,0 +1,95 @@
+\documentclass{llncs}
+\usepackage{fullpage}
+
+%load needed packages
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+
+\title{lncs LATEX template}
+
+\author{Alejandro Silva Rodríguez}
+\institute{\email{alexsilva@uma.es} \\
+Aprendizaje computacional. Universidad de Málaga.}
+
+\maketitle 
+
+\vspace{1cm} % Space down the title
+
+\textit{Italic paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+
+% This is a comment
+
+\section{Name Section 1}
+
+\textbf{Bold paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+
+\newcolumntype{C}{>{\centering\arraybackslash} m{3cm} }
+\begin{table}
+    \label{tab:example1}
+ 	\caption{Caption of the table}
+	\centering
+	\begin{tabular}{C|CCC}
+ 		\toprule
+ 		ColumnName1 & ColumnName2 & ColumnName3  & ColumnName4 \\
+ 		\midrule
+ 		Row2 column1 & Row2 column2 & Row2 column3 & Row2 column4 \\
+   		Row3 column1 & Row3 column2 & Row3 column3 & Row3 column4 \\
+ 		\bottomrule
+ 	\end{tabular}
+\end{table}
+ 
+Reference Table \ref{tab:example1}.
+
+
+
+\section{Name Section 2}
+
+This is the first paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+And this is the second paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+\subsection{Name Subsection 2.a}
+
+Example of itemize list:
+
+
+\begin{itemize}
+  \item Itemize item 1
+  \item Itemize item 2
+\end{itemize}
+
+
+
+\subsection{Name Subsection 2.2}
+
+Example of enumerate list:
+
+\begin{enumerate}
+  \item Enumerate item 1
+  \item Enumerate item 2
+  \item Enumerate item 3
+\end{enumerate}
+
+
+
+\section{Name Section 3}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.30\textwidth]{images/uma_logo.jpg}
+	\caption{Caption of the image}
+	\label{fig:example1}
+\end{figure}
+
+Reference Figure \ref{fig:example1}.
+
+\end{document}
