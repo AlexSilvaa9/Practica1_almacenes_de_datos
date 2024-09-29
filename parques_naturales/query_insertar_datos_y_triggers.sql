@@ -47,16 +47,44 @@ INSERT INTO PERSONA (dni, nombre, direccion, fecha_nacimiento, PARQUE_NATURAL_no
 ('01234567S', 'Natalia Ortiz', 'Calle Bosque 012', '1990-10-19', 'Picos de Europa');
 go
 -- Actualizar el numero de municipios del parque al insertar un municipio al que pertenece
-CREATE TRIGGER actualizar_numero_municipios
+CREATE TRIGGER actualizar_numero_municipios_insert
 ON MUNICIPIO
 AFTER INSERT
 AS
 BEGIN
+    -- Sumar 1 a cada parque natural por cada municipio insertado
     UPDATE PN
-    SET PN.numero_municipios_que_abarca = PN.numero_municipios_que_abarca + 1
+    SET PN.numero_municipios_que_abarca = PN.numero_municipios_que_abarca + (
+        SELECT COUNT(*)
+        FROM inserted I
+        WHERE I.PARQUE_NATURAL_nombre = PN.nombre
+    )
     FROM PARQUE_NATURAL PN
-    INNER JOIN inserted I ON PN.nombre = I.PARQUE_NATURAL_nombre;
+    WHERE EXISTS (
+        SELECT 1 FROM inserted I WHERE I.PARQUE_NATURAL_nombre = PN.nombre
+    );
 END;
+GO
+
+
+CREATE TRIGGER actualizar_numero_municipios_delete
+ON MUNICIPIO
+AFTER DELETE
+AS
+BEGIN
+    -- Restar 1 a cada parque natural por cada municipio eliminado
+    UPDATE PN
+    SET PN.numero_municipios_que_abarca = PN.numero_municipios_que_abarca - (
+        SELECT COUNT(*)
+        FROM deleted D
+        WHERE D.PARQUE_NATURAL_nombre = PN.nombre
+    )
+    FROM PARQUE_NATURAL PN
+    WHERE EXISTS (
+        SELECT 1 FROM deleted D WHERE D.PARQUE_NATURAL_nombre = PN.nombre
+    );
+END;
+GO
 
 -- Insertar municipios
 INSERT INTO MUNICIPIO (nombre, direccion_web, foto_escudo, partido_gobernante, gasto_agua_por_habitante, PARQUE_NATURAL_nombre) VALUES
