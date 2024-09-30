@@ -1,4 +1,4 @@
-\documentclass{llncs}
+\documentclass{article}
 \usepackage{fullpage}
 
 %load needed packages
@@ -37,8 +37,12 @@
 	{\large Septiembre 2024}
 \end{titlepage}
 
+% indice
+\tableofcontents
 
-\section{Name Section 1}
+\newpage
+
+\section{Introducción}
 
 \textbf{Bold paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
 
@@ -61,7 +65,7 @@ Reference Table \ref{tab:example1}.
 
 
 
-\section{Name Section 2}
+\section{Parques Naturales}
 
 This is the first paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -93,7 +97,7 @@ Example of enumerate list:
 
 
 
-\section{Name Section 3}
+\section{Liga De Futbol}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -105,5 +109,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 \end{figure}
 
 Reference Figure \ref{fig:example1}.
+
+\cite{oracle2024}
+\cite{sqlserver2022}
+
+% Incluir la bibliografía
+\bibliographystyle{plain}  % Estilo de la bibliografía (por ejemplo, plain, alpha, ieee, etc.)
+\bibliography{biblio}  % Nombre del archivo .bib sin la extensión
 
 \end{document}

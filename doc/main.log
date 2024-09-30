@@ -1,13 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  30 SEP 2024 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  30 SEP 2024 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-01-16> (./llncs.cls
-Document Class: llncs 2014/03/31 v2.19 
- LaTeX document class for Lecture Notes in Computer Science
+L3 programming layer <2023-01-16>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -25,139 +23,16 @@ File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
-\c@tracingmulticols=\count193
-\mult@box=\box51
-\multicol@leftmargin=\dimen141
-\c@unbalance=\count194
-\c@collectmore=\count195
-\doublecol@number=\count196
-\multicoltolerance=\count197
-\multicolpretolerance=\count198
-\full@width=\dimen142
-\page@free=\dimen143
-\premulticols=\dimen144
-\postmulticols=\dimen145
-\multicolsep=\skip50
-\multicolbaselineskip=\skip51
-\partial@page=\box52
-\last@line=\box53
-\maxbalancingoverflow=\dimen146
-\mult@rightbox=\box54
-\mult@grightbox=\box55
-\mult@firstbox=\box56
-\mult@gfirstbox=\box57
-\@tempa=\box58
-\@tempa=\box59
-\@tempa=\box60
-\@tempa=\box61
-\@tempa=\box62
-\@tempa=\box63
-\@tempa=\box64
-\@tempa=\box65
-\@tempa=\box66
-\@tempa=\box67
-\@tempa=\box68
-\@tempa=\box69
-\@tempa=\box70
-\@tempa=\box71
-\@tempa=\box72
-\@tempa=\box73
-\@tempa=\box74
-\@tempa=\box75
-\@tempa=\box76
-\@tempa=\box77
-\@tempa=\box78
-\@tempa=\box79
-\@tempa=\box80
-\@tempa=\box81
-\@tempa=\box82
-\@tempa=\box83
-\@tempa=\box84
-\@tempa=\box85
-\@tempa=\box86
-\@tempa=\box87
-\@tempa=\box88
-\@tempa=\box89
-\@tempa=\box90
-\@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\c@minrows=\count199
-\c@columnbadness=\count266
-\c@finalcolumnbadness=\count267
-\last@try=\dimen147
-\multicolovershoot=\dimen148
-\multicolundershoot=\dimen149
-\mult@nat@firstbox=\box94
-\colbreak@box=\box95
-\mc@col@check@num=\count268
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/aliascnt.sty
-Package: aliascnt 2018/09/07 v1.5 Alias counters (HO)
-)
-\c@chapter=\count269
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
-\tocchpnum=\dimen150
-\tocsecnum=\dimen151
-\tocsectotal=\dimen152
-\tocsubsecnum=\dimen153
-\tocsubsectotal=\dimen154
-\tocsubsubsecnum=\dimen155
-\tocsubsubsectotal=\dimen156
-\tocparanum=\dimen157
-\tocparatotal=\dimen158
-\tocsubparanum=\dimen159
-\@tempcntc=\count270
-\fnindent=\dimen160
-\c@@inst=\count271
-\c@@auth=\count272
-\c@auco=\count273
-\instindent=\dimen161
-\authrun=\box96
-\authorrunning=\toks16
-\tocauthor=\toks17
-\titrun=\box97
-\titlerunning=\toks18
-\toctitle=\toks19
-\c@theorem=\count274
-\c@case=\count275
-\c@conjecture=\count276
-\c@corollary=\count277
-\c@definition=\count278
-\c@example=\count279
-\c@exercise=\count280
-\c@lemma=\count281
-\c@note=\count282
-\c@problem=\count283
-\c@property=\count284
-\c@proposition=\count285
-\c@question=\count286
-\c@solution=\count287
-\c@remark=\count288
-\headlineindent=\dimen162
-)
 (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip52
+\FP@margin=\skip50
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks16
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
@@ -173,48 +48,48 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen163
-\Gin@req@width=\dimen164
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen165
-\ar@mcellbox=\box98
-\extrarowheight=\dimen166
-\NC@list=\toks21
-\extratabsurround=\skip53
-\backup@length=\skip54
-\ar@cellbox=\box99
+\col@sep=\dimen143
+\ar@mcellbox=\box51
+\extrarowheight=\dimen144
+\NC@list=\toks17
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen167
-\lightrulewidth=\dimen168
-\cmidrulewidth=\dimen169
-\belowrulesep=\dimen170
-\belowbottomsep=\dimen171
-\aboverulesep=\dimen172
-\abovetopsep=\dimen173
-\cmidrulesep=\dimen174
-\cmidrulekern=\dimen175
-\defaultaddspace=\dimen176
-\@cmidla=\count289
-\@cmidlb=\count290
-\@aboverulesep=\dimen177
-\@belowrulesep=\dimen178
-\@thisruleclass=\count291
-\@lastruleclass=\count292
-\@thisrulewidth=\dimen179
+\heavyrulewidth=\dimen145
+\lightrulewidth=\dimen146
+\cmidrulewidth=\dimen147
+\belowrulesep=\dimen148
+\belowbottomsep=\dimen149
+\aboverulesep=\dimen150
+\abovetopsep=\dimen151
+\cmidrulesep=\dimen152
+\cmidrulekern=\dimen153
+\defaultaddspace=\dimen154
+\@cmidla=\count193
+\@cmidlb=\count194
+\@aboverulesep=\dimen155
+\@belowrulesep=\dimen156
+\@thisruleclass=\count195
+\@lastruleclass=\count196
+\@thisrulewidth=\dimen157
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks22
-\inpenc@posthook=\toks23
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count293
-\l__pdf_internal_box=\box100
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box53
 )
 (./main.aux)
 \openout1 = `main.aux'.
@@ -235,17 +110,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen180
-\scratchbox=\box101
-\nofMPsegments=\count295
-\nofMParguments=\count296
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen181
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count198
+\scratchdimen=\dimen158
+\scratchbox=\box54
+\nofMPsegments=\count199
+\nofMParguments=\count266
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count267
+\MPscratchDim=\dimen159
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
+\everyMPtoPDFconversion=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
@@ -298,39 +173,41 @@ Package pdftex.def Info: images/uma_logo.jpg  used on input line 25.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/uma_logo.jpg>]
+(./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 41.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 50.
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [1]
 File: images/uma_logo.jpg Graphic file (type jpg)
 <use images/uma_logo.jpg>
-Package pdftex.def Info: images/uma_logo.jpg  used on input line 102.
+Package pdftex.def Info: images/uma_logo.jpg  used on input line 106.
 (pdftex.def)             Requested size: 140.92793pt x 140.91563pt.
-
-[2] [3] (./main.aux) ) 
+ [2] (./main.bbl) [3] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2590 strings out of 476091
- 43870 string characters out of 5794081
+ 2129 strings out of 476091
+ 37599 string characters out of 5794081
  1859330 words of memory out of 5000000
- 22950 multiletter control sequences out of 15000+600000
- 516890 words of font info for 47 fonts, out of 8000000 for 9000
+ 22498 multiletter control sequences out of 15000+600000
+ 516045 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,10n,67p,509b,235s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (3 pages, 954487 bytes).
+ 62i,10n,67p,509b,227s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/
+cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (4 pages, 957556 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{sqlserver2022}
+Microsoft Corporation.
+\newblock {\em Microsoft SQL Server 2022 Documentation}.
+\newblock Microsoft Corporation, Redmond, Washington, 2022.
+\newblock Versión SQL Server 2022.
+
+\bibitem{oracle2024}
+Oracle Corporation.
+\newblock {\em Oracle SQL Developer Data Modeler User's Guide}.
+\newblock Oracle Corporation, Redwood Shores, California, 2024.
+\newblock Versión 23.2.
+
+\end{thebibliography}
