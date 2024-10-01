@@ -2,8 +2,9 @@
 \contentsline {section}{\numberline {1}Introducción}{2}{}%
 \contentsline {section}{\numberline {2}Parques Naturales}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Requisitos De Datos}{2}{}%
-\contentsline {subsection}{\numberline {2.2}Diseño Lógico}{2}{}%
-\contentsline {subsection}{\numberline {2.3}Diseño Entidad Relación}{2}{}%
-\contentsline {subsection}{\numberline {2.4}Implementación}{2}{}%
-\contentsline {subsection}{\numberline {2.5}Consultas}{9}{}%
-\contentsline {section}{\numberline {3}Liga De Futbol}{10}{}%
+\contentsline {subsection}{\numberline {2.2}Diseño Lógico}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Diseño Entidad Relación}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Implementación}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Consultas}{6}{}%
+\contentsline {section}{\numberline {3}Liga De Futbol}{7}{}%
+\contentsline {section}{\numberline {4}Acceso al Repositorio}{7}{}%

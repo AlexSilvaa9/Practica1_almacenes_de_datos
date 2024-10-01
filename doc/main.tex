@@ -9,7 +9,7 @@
 \usepackage[T1]{fontenc}
 
 \usepackage[spanish]{babel} % Paquete para el idioma español
-
+\usepackage{float}  % Necesario para [H]
 \usepackage{listings}
 \usepackage{xcolor}
 
@@ -109,27 +109,37 @@ Con objeto de poder determinar el estado de salud del parque necesitamos informa
 
 Las especies tienen una extensión (en hectáreas) necesaria para desarrollarse en libertad, dato que aparece en los estudios generales sobre cada especie. Sin embargo, el dato de si la especie está superpoblada en cada parque se guardará explícitamente, porque puede depender de factores como si el parque es montañoso, si tiene acuíferos, etc y por tanto precisa de la opinión última de un experto. Tenga en cuenta que cada municipio abarca a lo sumo un sólo parque. 
 
+\newpage
 \subsection{Diseño Lógico}
 
-\begin{figure}
+Para crear el diseño lógico de la base de datos en Oracle Datamodeler \cite{oracle2024} empezaremos representando las figuras más relevantes como entidades, entre ellas encontramos a especie animal, municipio, parque natural y persona (figura \ref{fig:p_logico}). Cada entidad tendrá atributos que solo pertenecen a ella y no se relacionan con ninguna entidad más excepto del atributo numero de municipios que abarca de un parque natural, tendrá que ir actualizandose mediante un trigger cada vez que se le añade o elimina una relación municipio.Tambien tendremos una entidad intermedia entre especie animal y parque natural que almacenará la relacion entre estas y los atributos extensión, población estimada y is\_superpoblado (booleano).
+\\
+
+Por ultimo, tenemos relaciones entre parque natural y municipio y dos entre parque natural y persona. Una relación 1:N representará los consejeros del parque natural y otra 1:1 representara el presidente del parque.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.70\textwidth]{images/diagrama_logico_parques_naturales.png}
+	\includegraphics[width=\textwidth]{images/diagrama_logico_parques_naturales.png}
 	\caption{Diagrama Lógico De Parques Naturales}
 	\label{fig:p_logico}
 \end{figure}
 
+\newpage
 
 \subsection{Diseño Entidad Relación}
 
-\begin{figure}
+En el diseño entidad relación tenemos que tener en cuenta que las claves y restricciones están donde se necesitan para poder hacer consultas en la base de datos. Observamos (figura \ref{fig:p_relacional}) que parque natural tiene una clave foranea dni que representa al unico presidente de esta entidad, mientras que persona tiene una clave foranea nombre de parque natural que relaciona a los consejeros con esta. Municipio obtiene la clave foranea de parque natural debido a su particion en la parte N de la relación. La entidad intermedia de especie animal y parque natural obtiene sus dos claves foraneas que pasan a ser su clave principal.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.70\textwidth]{images/diagrama_relacional_parques_naturales.png}
+	\includegraphics[width=\textwidth]{images/diagrama_relacional_parques_naturales.png}
 	\caption{Diagrama Relacional De Parques Naturales}
 	\label{fig:p_relacional}
 \end{figure}
 
 \subsection{Implementación}
 
+En la implementación de la base de datos generaremos el ddl (data definition languaje) de la base de datos e insertaremos tuplas en la misma. En el listing \ref{fig:p_ddl} encontramos una pequeña parte del mismo donde se crea la tabla de especie animal. Esto se ejecutará en Microsoft SQL Server \cite{sqlserver2022} donde se alojará la base de datos.
 \begin{lstlisting}[style=ddlstyle, label=fig:p_ddl,caption=Definicion De Datos De Parques Naturales]
 	
 	CREATE TABLE ESPECIE_ANIMAL 
@@ -146,199 +156,25 @@ Las especies tienen una extensión (en hectáreas) necesaria para desarrollarse 
 	ALLOW_ROW_LOCKS = ON )
 	GO
 	
-	CREATE TABLE MUNICIPIO 
-	(
-	nombre VARCHAR (30) NOT NULL , 
-	direccion_web VARCHAR (30) , 
-	foto_escudo IMAGE , 
-	partido_gobernante VARCHAR (30) , 
-	gasto_agua_por_habitante NUMERIC (28) , 
-	PARQUE_NATURAL_nombre VARCHAR (30) NOT NULL 
-	)
-	GO
 	
-	ALTER TABLE MUNICIPIO ADD CONSTRAINT MUNICIPIO_PK PRIMARY KEY CLUSTERED (nombre)
-	WITH (
-	ALLOW_PAGE_LOCKS = ON , 
-	ALLOW_ROW_LOCKS = ON )
-	GO
-	
-	CREATE TABLE PARQUE_ESPECIE 
-	(
-	extension NUMERIC (28) , 
-	poblacion_estimada NUMERIC (28) , 
-	is_superpoblado BIT , 
-	PARQUE_NATURAL_nombre VARCHAR (30) NOT NULL , 
-	ESPECIE_ANIMAL_nombre_cientifico VARCHAR (30) NOT NULL 
-	)
-	GO
-	
-	ALTER TABLE PARQUE_ESPECIE ADD CONSTRAINT PARQUE_ESPECIE_PK PRIMARY KEY CLUSTERED (PARQUE_NATURAL_nombre, ESPECIE_ANIMAL_nombre_cientifico)
-	WITH (
-	ALLOW_PAGE_LOCKS = ON , 
-	ALLOW_ROW_LOCKS = ON )
-	GO
-	
-	CREATE TABLE PARQUE_NATURAL 
-	(
-	nombre VARCHAR (30) NOT NULL , 
-	telefono NUMERIC (28) , 
-	direccion_administrativa VARCHAR (30) , 
-	direccion_web VARCHAR (25) , 
-	correo_electronico VARCHAR (25) , 
-	fecha_de_declaracion DATE , 
-	numero_municipios_que_abarca NUMERIC (28) , 
-	PERSONA_dni VARCHAR (16) NOT NULL 
-	)
-	GO 
-	
-	
-	
-	
-	CREATE UNIQUE NONCLUSTERED INDEX 
-	PARQUE_NATURAL__IDX ON PARQUE_NATURAL 
-	( 
-	PERSONA_dni 
-	) 
-	GO
-	
-	ALTER TABLE PARQUE_NATURAL ADD CONSTRAINT PARQUE_NATURAL_PK PRIMARY KEY CLUSTERED (nombre)
-	WITH (
-	ALLOW_PAGE_LOCKS = ON , 
-	ALLOW_ROW_LOCKS = ON )
-	GO
-	
-	CREATE TABLE PERSONA 
-	(
-	dni VARCHAR (16) NOT NULL , 
-	nombre VARCHAR (30) , 
-	direccion VARCHAR (30) , 
-	fecha_nacimiento DATE , 
-	PARQUE_NATURAL_nombre VARCHAR (30) 
-	)
-	GO
-	
-	ALTER TABLE PERSONA ADD CONSTRAINT PERSONA_PK PRIMARY KEY CLUSTERED (dni)
-	WITH (
-	ALLOW_PAGE_LOCKS = ON , 
-	ALLOW_ROW_LOCKS = ON )
-	GO
-	
-	ALTER TABLE MUNICIPIO 
-	ADD CONSTRAINT MUNICIPIO_PARQUE_NATURAL_FK FOREIGN KEY 
-	( 
-	PARQUE_NATURAL_nombre
-	) 
-	REFERENCES PARQUE_NATURAL 
-	( 
-	nombre 
-	) 
-	ON DELETE NO ACTION 
-	ON UPDATE NO ACTION 
-	GO
-	
-	ALTER TABLE PARQUE_ESPECIE 
-	ADD CONSTRAINT PARQUE_ESPECIE_ESPECIE_ANIMAL_FK FOREIGN KEY 
-	( 
-	ESPECIE_ANIMAL_nombre_cientifico
-	) 
-	REFERENCES ESPECIE_ANIMAL 
-	( 
-	nombre_cientifico 
-	) 
-	ON DELETE NO ACTION 
-	ON UPDATE NO ACTION 
-	GO
-	
-	ALTER TABLE PARQUE_ESPECIE 
-	ADD CONSTRAINT PARQUE_ESPECIE_PARQUE_NATURAL_FK FOREIGN KEY 
-	( 
-	PARQUE_NATURAL_nombre
-	) 
-	REFERENCES PARQUE_NATURAL 
-	( 
-	nombre 
-	) 
-	ON DELETE NO ACTION 
-	ON UPDATE NO ACTION 
-	GO
-	
-	ALTER TABLE PARQUE_NATURAL 
-	ADD CONSTRAINT PARQUE_NATURAL_PERSONA_FK FOREIGN KEY 
-	( 
-	PERSONA_dni
-	) 
-	REFERENCES PERSONA 
-	( 
-	dni 
-	) 
-	ON DELETE NO ACTION 
-	ON UPDATE NO ACTION 
-	GO
-	
-	ALTER TABLE PERSONA 
-	ADD CONSTRAINT PERSONA_PARQUE_NATURAL_FK FOREIGN KEY 
-	( 
-	PARQUE_NATURAL_nombre
-	) 
-	REFERENCES PARQUE_NATURAL 
-	( 
-	nombre 
-	) 
-	ON DELETE NO ACTION 
-	ON UPDATE NO ACTION 
-	GO
-
 \end{lstlisting}
+\newpage
 
+En el listing \ref{fig:p_insert} se observan ejemplos de las inserciones que se hacen sobre la base de datos y el trigger que añadimos para la actualización del número de municipios. Es crucial seguir un orden logico a la hora de la inserción ya que algunas entidades dependen de otras.
 \begin{lstlisting}[style=sqlstyle, label=fig:p_insert,caption=Carga de datos]
 	-- Insertar especies animales
 	INSERT INTO ESPECIE_ANIMAL (nombre_cientifico, nombre_comun, esperanza_vida) VALUES
 	('Ursus arctos', 'Oso pardo', 25),
-	('Canis lupus', 'Lobo', 15),
-	('Ailuropoda melanoleuca', 'Oso panda', 20),
-	('Panthera leo', 'Leon', 14),
-	('Elephas maximus', 'Elefante asiático', 60),
-	('Giraffa camelopardalis', 'Jirafa', 25),
-	('Balaenoptera musculus', 'Ballena azul', 80),
-	('Puma concolor', 'Puma', 12),
-	('Carcharodon carcharias', 'Tiburón blanco', 30),
-	('Lycaon pictus', 'Perro salvaje africano', 10),
-	('Lynx pardinus', 'Lynx ibérico', 13),
-	('Acinonyx jubatus', 'Guepardo', 12),
-	('Aquila chrysaetos', 'Águila real', 30),
-	('Haliaeetus leucocephalus', 'Águila calva', 20),
-	('Dendrocopos major', 'Pico picapinos', 10);
-	
 	-- Insertar personas (presidentes) - un presidente por parque natural
 	INSERT INTO PERSONA (dni, nombre, direccion, fecha_nacimiento) VALUES
-	('12345678A', 'Juan Pérez', 'Calle Falsa 123', '1980-01-01'),  -- Sierra Nevada
-	('23456789B', 'María García', 'Avenida Real 456', '1990-05-15'),  -- Doñana
 	('34567890C', 'Luis Torres', 'Calle Larga 789', '1985-02-20'),  -- Cabo de Gata
-	('45678901D', 'Ana Martínez', 'Plaza Central 321', '1992-08-22');  -- Picos de Europa
-	
 	-- Insertar parques naturales
 	INSERT INTO PARQUE_NATURAL (nombre, telefono, direccion_administrativa, direccion_web, correo_electronico, fecha_de_declaracion, numero_municipios_que_abarca, PERSONA_dni) VALUES
-	('Sierra Nevada', 123456789, 'Granada', 'www.sierranevada.com', 'contacto@sierranevada.com', '1989-06-01', 0, '12345678A'),
-	('Doñana', 987654321, 'Huelva', 'www.donana.com', 'contacto@donana.com', '1994-07-15', 0, '23456789B'),
-	('Cabo de Gata', 123123123, 'Almería', 'www.cabodegata.com', 'info@cabodegata.com', '1997-05-12', 0, '34567890C'),
+	('Sierra Nevada', 123456789, 'Granada', 'www.sierranevada.com', 
 	('Picos de Europa', 321321321, 'Asturias', 'www.picosdeeuropa.com', 'contacto@picos.com', '1999-10-05', 0, '45678901D');
-	
 	-- Insertar consejeros
 	INSERT INTO PERSONA (dni, nombre, direccion, fecha_nacimiento, PARQUE_NATURAL_nombre) VALUES
-	
-	('89012345H', 'Elena Ruiz', 'Avenida del Parque 654', '1983-08-12', 'Doñana'),
-	('90123456I', 'Fernando García', 'Calle del Río 765', '1990-01-25', 'Doñana'),
-	('12345678J', 'Fernando Pérez', 'Calle Vista 123', '1982-05-05', 'Cabo de Gata'),
 	('23456789K', 'Valeria Torres', 'Avenida Costa 234', '1988-09-17', 'Cabo de Gata'),
-	('34567890L', 'Diego Castillo', 'Calle Playa 345', '1993-12-20', 'Cabo de Gata'),
-	('45678901M', 'Rosa Medina', 'Plaza de la Paz 456', '1995-04-08', 'Cabo de Gata'),
-	('56789012N', 'Hugo Jiménez', 'Calle del Sol 567', '1990-11-01', 'Cabo de Gata'),
-	('67890123O', 'Carmen Romero', 'Avenida Montaña 678', '1994-03-13', 'Picos de Europa'),
-	('78901234P', 'Salvador Gómez', 'Calle Viento 789', '1981-02-25', 'Picos de Europa'),
-	('89012345Q', 'Marina González', 'Calle Nieve 890', '1986-07-05', 'Picos de Europa'),
-	('90123456R', 'Luis Méndez', 'Avenida Río 901', '1978-01-15', 'Picos de Europa'),
-	('01234567S', 'Natalia Ortiz', 'Calle Bosque 012', '1990-10-19', 'Picos de Europa');
 	go
 	-- Actualizar el numero de municipios del parque al insertar un municipio al que pertenece
 	CREATE TRIGGER actualizar_numero_municipios_insert
@@ -359,67 +195,19 @@ Las especies tienen una extensión (en hectáreas) necesaria para desarrollarse 
 	);
 	END;
 	GO
-	
-	
-	CREATE TRIGGER actualizar_numero_municipios_delete
-	ON MUNICIPIO
-	AFTER DELETE
-	AS
-	BEGIN
-	-- Restar 1 a cada parque natural por cada municipio eliminado
-	UPDATE PN
-	SET PN.numero_municipios_que_abarca = PN.numero_municipios_que_abarca - (
-	SELECT COUNT(*)
-	FROM deleted D
-	WHERE D.PARQUE_NATURAL_nombre = PN.nombre
-	)
-	FROM PARQUE_NATURAL PN
-	WHERE EXISTS (
-	SELECT 1 FROM deleted D WHERE D.PARQUE_NATURAL_nombre = PN.nombre
-	);
-	END;
-	GO
-	
 	-- Insertar municipios
 	INSERT INTO MUNICIPIO (nombre, direccion_web, foto_escudo, partido_gobernante, gasto_agua_por_habitante, PARQUE_NATURAL_nombre) VALUES
 	('Granada', 'www.granada.es', NULL, 'PSOE', 50.25, 'Sierra Nevada'),
-	('Almonte', 'www.almonte.es', NULL, 'PP', 60.50, 'Doñana'),
-	('Almería', 'www.almeria.es', NULL, 'Cs', 55.00, 'Cabo de Gata'),
-	('Cangas de Onís', 'www.cangasdeonis.es', NULL, 'PSOE', 45.75, 'Picos de Europa'),
-	('Baza', 'www.baza.es', NULL, 'PP', 58.25, 'Sierra Nevada'),
-	('Huelva', 'www.huelva.es', NULL, 'PSOE', 57.00, 'Doñana'),
-	('Oviedo', 'www.oviedo.es', NULL, 'PSOE', 62.00, 'Picos de Europa'),
-	('San José', 'www.sanjose.es', NULL, 'PP', 61.50, 'Cabo de Gata'),
-	('La Zubia', 'www.lazubia.es', NULL, 'PSOE', 54.00, 'Sierra Nevada'),
-	('Moguer', 'www.moguer.es', NULL, 'PP', 59.00, 'Doñana');
-	
 	-- Insertar especies en parques
 	INSERT INTO PARQUE_ESPECIE (extension, poblacion_estimada, is_superpoblado, PARQUE_NATURAL_nombre, ESPECIE_ANIMAL_nombre_cientifico) VALUES
 	(10000, 200, 0, 'Sierra Nevada', 'Ursus arctos'),
-	(15000, 150, 0, 'Doñana', 'Canis lupus'),
-	(12000, 50, 1, 'Doñana', 'Ailuropoda melanoleuca'),
-	(13000, 300, 0, 'Cabo de Gata', 'Giraffa camelopardalis'),
-	(14000, 250, 0, 'Picos de Europa', 'Panthera leo'),
-	(8000, 100, 0, 'Cabo de Gata', 'Elephas maximus'),
-	(9000, 60, 0, 'Sierra Nevada', 'Balaenoptera musculus'),
-	(11000, 80, 1, 'Doñana', 'Puma concolor'),
-	(10000, 500, 0, 'Picos de Europa', 'Lynx pardinus'),
-	(9000, 75, 0, 'Cabo de Gata', 'Acinonyx jubatus'),
-	(15000, 120, 0, 'Sierra Nevada', 'Aquila chrysaetos'),
-	(16000, 200, 0, 'Picos de Europa', 'Haliaeetus leucocephalus'),
-	(17000, 90, 0, 'Doñana', 'Dendrocopos major');
-	
-	
 \end{lstlisting}
 \subsection{Consultas}
 
+Para probar el correcto funcionamiento de la base de datos realizaremos consultas (listing \ref{fig:p_consultas}) que involucren varias tablas.
 \begin{lstlisting}[style=sqlstyle, label=fig:p_consultas,caption=Consultas Sobre Parques Naturales]
 	
-	 use parques_naturales
-	go
-	
 	-- Consulta 1: Seleccionar los animales que se pueden encontrar en Sierra Nevada
-	
 	SELECT e.nombre_cientifico, e.nombre_comun, p.nombre
 	FROM PARQUE_NATURAL p , PARQUE_ESPECIE pe, ESPECIE_ANIMAL e
 	WHERE e.nombre_cientifico=pe.ESPECIE_ANIMAL_nombre_cientifico and pe.PARQUE_NATURAL_nombre=p.nombre and p.nombre='Sierra Nevada';
@@ -448,18 +236,18 @@ Las especies tienen una extensión (en hectáreas) necesaria para desarrollarse 
 	FROM PERSONA presi, ESPECIE_ANIMAL e, PARQUE_NATURAL p, PARQUE_ESPECIE pe
 	WHERE presi.dni=p.PERSONA_dni and p.nombre=pe.PARQUE_NATURAL_nombre and pe.ESPECIE_ANIMAL_nombre_cientifico=e.nombre_cientifico and e.nombre_comun LIKE 'Oso%';
   \end{lstlisting}
+
+\newpage
 \section{Liga De Futbol}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+\section{Acceso al Repositorio}
 
-Reference Figure \ref{fig:example1}.
-
-\cite{oracle2024}
-\cite{sqlserver2022}
+Toda la información adicional, incluyendo el código fuente y la documentación completa de este proyecto, está disponible en el repositorio de GitHub \cite{silva2024github}.
 
 % Incluir la bibliografía
 \bibliographystyle{plain}  % Estilo de la bibliografía (por ejemplo, plain, alpha, ieee, etc.)
-\bibliography{biblio}  % Nombre del archivo .bib sin la extensión
+\bibliography{bibli}  % Nombre del archivo .bib sin la extensión
 
 \end{document}
