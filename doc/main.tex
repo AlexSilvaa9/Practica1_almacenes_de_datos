@@ -238,10 +238,217 @@ Para probar el correcto funcionamiento de la base de datos realizaremos consulta
   \end{lstlisting}
 
 \newpage
-\section{Liga De Futbol}
+\section{Liga De Fútbol}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+En esta sección se describirá en detalle como se ha llevado a cabo el diseño y la implementación de la base de datos sobre la liga de fútbol, además de las correspondientes consultas.
 
+\subsection{Requisitos De Datos}
+Se quiere crear una base de datos que almacene información sobre la liga española de primera división. Esta información es anual (sólo datos de la liga en curso) y se recolectan los datos sobre los equipos que militan ese año en la categoría, su plantilla, cuerpo técnico y directivos, partidos en los que se enfrentan y resultados (parciales y globales de la liga). 
+\\
+
+Los equipos están identificados por su nombre y guardaremos además su número de socios, el nombre de su campo, la ciudad a la que pertenecen, el año de fundación, el número de años continuados en primera división y el nombre de su fundador. 
+\\
+
+Los equipos están compuestos por un entrenador, un médico, un preparador físico, un director deportivo, un entrenador de porteros, un presidente del club, varios consejeros y la plantilla de jugadores. De todo este personal se guarda su nombre, fecha de nacimiento, DNI, teléfono, dirección y sueldo. Además, de los jugadores se guarda el apodo o alias, el puesto en el equipo, los años para el fin del contrato, la cuantía para la claúsula de rescisión y el número de años en el equipo. 
+\\
+
+El campeonato de liga está compuesto por una serie de jornadas que se identifican con un número. Cada jornada está formada por un conjunto de partidos, que son enfrentamientos entre una pareja de equipos y se juegan en el campo de uno de los dos. Queremos tener asociados los partidos a cada jornada y deseamos conocer su resultado (5-0, 3-1, 0-0, etc.), la fecha y hora en que se celebraron, la recaudación por taquilla, el número de espectadores y las personas que forman el equipo arbitral (un árbitro principal, dos jueces de línea y un cuarto árbitro) . Además guardamos para cada jornada el total de goles marcados de cabeza, en propia meta y de penalti y la recaudación obtenida por medio de las quinielas de esa jornada. 
+\\
+
+Los colegiados (árbitros y jueces de línea) son seleccionados al principio de temporada para participar en esa categoría. De ellos se almacena el número de colegiado (que identifica a cada uno), nombre, DNI, antigüedad en la categoría y categoría en la que participó el año anterior. En cada temporada no son intercambiables los papeles de árbitro y juez de línea (un juez de línea no puede actuar como árbitro ni al revés). De los jueces de línea, además de los datos antes mencionados guardamos un dato que indique las posibilidades de desempeñar funciones de árbitro en la temporada siguiente y edad, y de los árbitros si ha sido o no internacional y si fue futbolista anteriormente. 
+
+
+\newpage
+\subsection{Diseño Lógico}
+
+Para la creación del diseño lógico de nuestra base de datos utilizando Oracle Datamodeler \cite{oracle2024}, para ello comenzaremos representando los elementos más significativos, las entidades. En nuestra caso, como se muestra en la figura \ref{fig:f_logico}, encontramos las entidades jornada, partido, equipo, personal (que cuenta con un subtipo jugador) y colegiado que a su vez cuenta con dos subtipos, arbitro y juez de linea. Cada una cuenta con atributos propios en su mayoría, pero existen casos como los supertipos que compartirán clave principal con sus subtipos correspondientes.
+\\
+
+El diagrama cuenta con seis relaciones entre equipo y personal, correspondientes a los diferentes trabajadores nombrados en los requisitos (tales como médicos, entrenadores, preparadores...) siendo la primera de estas la utilizada para consejeros ya que requiere una relación 1:N. Además existe una relación de dependencia entre jornada y partido, dos relaciones 1:1 entre partido y equipo referentes a los equipos local y visitante, otra entre equipo y los jugadores que participan en él; y por último, dos relaciones asociadas a los colegiados que arbitran el partido (árbitro principal y asistente), y otras dos para los jueces de línea.
+\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/diagrama_logico_futbol.png}
+	\caption{Diagrama Lógico De La Liga de Fútbol}
+	\label{fig:f_logico}
+\end{figure}
+
+\newpage
+
+\subsection{Diseño Entidad Relación}
+Una vez acabado el diseño lógico, pasamos a la entidad relación. En este se muestran las claves migrantes que pasarán a otras entidades debido a las relaciones entre ellas (Figura \ref{fig:f_relacional}), como por ejemplo los DNIs heredados por equipo debido a sus múltiples relaciones con personal, o la clave foránea de jugadores (DNI de nuevo) heredada de su supertipo, al igual que lo hacen los subtipos de colegiado. En esta sección podemos observar que se ha creado un nuevo atributo en colegiado llamado COLEGIADO TYPE que indicará si se trata de un árbitro o de un juez de línea. Tenemos también en partido los IDs de los jueces y árbitros que participarán en él y el número de jornada al que corresponde. Jugador indicará además el nombre del equipo al que pertenece.
+\\
+
+Los consejeros al ser relación 1:N guardarán información sobre el equipo al que pertenecen dentro de personal.
+\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/diagrama_relacional_futbol.png}
+	\caption{Diagrama Relacional De La Liga de Fútbol}
+	\label{fig:f_relacional}
+\end{figure}
+
+\newpage
+\subsection{Implementación}
+
+En la implementación de la base de datos generaremos el ddl (data definition languaje) e insertaremos tuplas en la misma. En el listing \ref{fig:f_ddl} encontramos una pequeña parte del mismo donde se crea la tabla equipos con sus claves de las relaciones. Esto se ejecutará en Microsoft SQL Server \cite{sqlserver2022} donde se alojará la base de datos.
+\begin{lstlisting}[style=ddlstyle, label=fig:f_ddl,caption=Definicion De Datos De La Liga de Fútbol]
+	
+	CREATE TABLE EQUIPOS 
+	(
+	Nombre VARCHAR (40) NOT NULL , 
+	n_socios INTEGER , 
+	Campo VARCHAR (30) , 
+	Ciudad VARCHAR (30) , 
+	año_fundacion INTEGER , 
+	años_continuados_primera INTEGER , 
+	Fundador VARCHAR (40) , 
+	medicoL_DNI VARCHAR (15) NOT NULL , 
+	entrenador_DNI VARCHAR (15) NOT NULL , 
+	preparador_DNI VARCHAR (15) NOT NULL , 
+	director_DNI VARCHAR (15) NOT NULL , 
+	entrenador_portero_DNI VARCHAR (15) NOT NULL , 
+	presidente_DNI VARCHAR (15) NOT NULL 
+	)
+	GO 
+	
+	CREATE UNIQUE NONCLUSTERED INDEX 
+	EQUIPOS__IDX ON EQUIPOS 
+	( 
+	director_DNI 
+	) 
+	GO 
+	
+	CREATE UNIQUE NONCLUSTERED INDEX 
+	EQUIPOS__IDXv1 ON EQUIPOS 
+	( 
+	entrenador_portero_DNI 
+	) 
+	GO 	
+	
+	CREATE UNIQUE NONCLUSTERED INDEX 
+	EQUIPOS__IDXv2 ON EQUIPOS 
+	( 
+	preparador_DNI 
+	) 
+	GO 
+	
+	CREATE UNIQUE NONCLUSTERED INDEX 
+	EQUIPOS__IDXv3 ON EQUIPOS 
+	( 
+	entrenador_DNI 
+	) 
+	GO 
+	
+	CREATE UNIQUE NONCLUSTERED INDEX 
+	EQUIPOS__IDXv4 ON EQUIPOS 
+	( 
+	medicoL_DNI 
+	) 
+	GO 
+		
+	CREATE UNIQUE NONCLUSTERED INDEX 
+	EQUIPOS__IDXv5 ON EQUIPOS 
+	( 
+	presidente_DNI 
+	) 
+	GO
+	
+	ALTER TABLE EQUIPOS ADD CONSTRAINT EQUIPOS_PK PRIMARY KEY CLUSTERED (Nombre)
+	WITH (
+	ALLOW_PAGE_LOCKS = ON , 
+	ALLOW_ROW_LOCKS = ON )
+	GO
+	
+\end{lstlisting}
+	
+En el listing \ref{fig:f_insert} se observan ejemplos de las inserciones que se hacen sobre la base de datos, siguiendo un orden lógico para la correcta inserción teniendo en cuenta ciertas dependencias.
+\\
+\begin{lstlisting}[style=sqlstyle, label=fig:f_insert,caption=Carga de datos]
+	-- Insercion de colegiados (incluyendo jueces de línea)
+	INSERT INTO COLEGIADO (numero, Nombre, DNI, antiguedad, categoria_anterior, COLEGIADO_TYPE) 
+	VALUES 
+	(1, 'Antonio Mateu', '12345678A', 10, 'Segunda División', 'ARBITRO'),
+	(2, 'Carlos del Cerro', '23456789B', 12, 'Segunda División B', 'ARBITRO'),
+	(3, 'José Luis Munuera', '34567890C', 8, 'Segunda División', 'ARBITRO'),
+	(4, 'Alejandro Hernández', '45678901D', 9, 'Segunda División', 'ARBITRO'),
+	(5, 'Jesús Gil Manzano', '56789012E', 11, 'Segunda División', 'ARBITRO'),
+	(6, 'Luis Martínez', '67890123F', 7, 'Segunda División', 'JUEZ_LINEA'),  
+	(7, 'Javier López', '78901234G', 6, 'Segunda División', 'JUEZ_LINEA'),  
+	(8, 'Fernando Díaz', '89012345H', 5, 'Segunda División', 'JUEZ_LINEA');  
+	
+	-- Inserción de arbitros
+	INSERT INTO ARBITRO (numero, internacional, futbolista) 
+	VALUES 
+	(1, 1, 0),
+	(2, 0, 0),
+	(3, 1, 0),
+	(4, 0, 1),
+	(5, 1, 0);
+\end{lstlisting}
+
+\newpage
+A continuación se muestra en el listing \ref{fig:f_jugador} una alteración de la tabla jugador previa a la inserción de los datos, debido a una restricción que prohibía que dos jugadores pertenecieran a un mismo equipo.
+\\
+
+\begin{lstlisting}[style=sqlstyle, label=fig:f_jugador,caption=Corrección de restricción]
+	ALTER TABLE JUGADOR
+	DROP CONSTRAINT JUGADOR_PKv1;
+	
+	-- Insercion de jugadores
+	INSERT INTO JUGADOR (DNI, Apodo, puesto, años_fin_contrato, cuantia_clausula, n_años, PARTIDO_JORNADA_numero, EQUIPOS_Nombre) 
+	VALUES 
+	('DNI1001', 'Benzema', 'Delantero', 2025, 100000000, 5, 1, 'Real Madrid'),
+	('DNI1002', 'Modric', 'Centrocampista', 2024, 50000000, 8, 1, 'Real Madrid'),
+	('DNI1003', 'Ter Stegen', 'Portero', 2026, 80000000, 5, 2, 'FC Barcelona'),
+	('DNI1004', 'Pedri', 'Centrocampista', 2026, 150000000, 6, 2, 'FC Barcelona'),
+	('DNI1005', 'Koke', 'Centrocampista', 2025, 60000000, 4, 3, 'Atletico Madrid'),
+	('DNI1006', 'Navas', 'Defensa', 2024, 30000000, 3, 4, 'Sevilla FC');
+	
+\end{lstlisting}
+
+\newpage
+\subsection{Consultas}
+Una vez implementados correctamente todos los datos y rellenadas las tablas, procedemos a la realización de consultas (listing \ref{fig:f_consultas}).
+\\
+
+
+\begin{lstlisting}[style=sqlstyle, label=fig:f_consultas,caption=Consultas Sobre La Liga de Fútbol]
+	
+	--CONSULTA 1: Salario medio de los entrenadores de los equipos
+	SELECT AVG(p.sueldo) as salario_medio_entrenadores
+	FROM EQUIPOS e, PERSONAL p 
+	WHERE e.entrenador_DNI = p.dni;
+	
+	--CONSULTA 2: Nombre, antiguedad y tipo de los colegiados con mas de 6 años de antiguedad
+	SELECT Nombre,antiguedad, COLEGIADO_TYPE
+	FROM COLEGIADO
+	WHERE antiguedad>6
+	ORDER BY antiguedad;
+	
+	--CONSULTA 3: Muestra el nombre de los arbitros que han participado en al menos dos partidos y que son internacionales
+	SELECT distinct( c.Nombre)
+	FROM COLEGIADO c
+	JOIN ARBITRO a ON c.numero = a.numero
+	JOIN PARTIDO p ON p.ARBITRO_principal = c.numero OR p.ARBITRO_numero2 = c.numero
+	WHERE a.internacional = 1
+	GROUP BY c.Nombre
+	HAVING COUNT(c.numero) >= 2;
+	
+	--CONSULTA 4: Muestra los goles totales de cada jornadas
+	SELECT numero, SUM(goles_cabeza + goles_propia + goles_penalti) as total_goles
+	FROM JORNADA
+	GROUP BY numero;
+	
+	--CONSULTA 5: Recaudacion media por espectador en cada partido
+	SELECT equipo_local, equipo_residente, recaudacion/n_espectadores as recaudacion_media
+	FROM PARTIDO;
+	
+\end{lstlisting}
+	
+\newpage
 \section{Acceso al Repositorio}
 
 Toda la información adicional, incluyendo el código fuente y la documentación completa de este proyecto, está disponible en el repositorio de GitHub \cite{silva2024github}.
