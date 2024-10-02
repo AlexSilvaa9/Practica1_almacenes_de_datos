@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B4AA3E0D-DEB1-EEA8-4E2E-7EA5869CDCF6" name="COLEGIADO">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:04:47 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="numero" id="2050FC35-78CA-C477-049A-DDEF1A8E2928">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:04:54 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="01442526-F976-CA0F-9581-EFAF6EE8EF96">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:05:04 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DNI" id="FB5F3B00-7E41-BE5B-9EB3-3FFFD341D090">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:05:21 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="antiguedad" id="52124135-7BF3-2931-3064-FD59C3E32555">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:05:37 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="categoria_anterior" id="090CEDFD-E608-0E7E-CCDE-E07BD4B98FA4">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:05:59 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="998CC826-23C1-2A0B-CC3C-CE146710A0F0" name="COLEGIADO PK">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:05:03 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2050FC35-78CA-C477-049A-DDEF1A8E2928</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

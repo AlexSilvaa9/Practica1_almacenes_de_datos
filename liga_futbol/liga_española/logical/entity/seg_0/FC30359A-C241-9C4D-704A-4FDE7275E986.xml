@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FC30359A-C241-9C4D-704A-4FDE7275E986" name="JORNADA">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:47:29 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="numero" id="87359A00-634B-29F2-AF6E-CA7076B7A901">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:47:36 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="goles_cabeza" id="D5BEF86E-3352-A84E-039E-0E5A04641654">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:48:02 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="goles_propia" id="BC65DF5F-769C-91E5-1E08-E891D0E7AE8D">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:48:14 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="goles_penalti" id="406D71CE-DF55-2AA7-9845-5EE05C2F3758">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:48:36 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="recaudacion" id="13F6E222-0923-DDB7-E1FF-7CFF6AAF8622">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:48:50 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2990C806-7D29-1F92-2572-A60ADA909427" name="JORNADA PK">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:48:01 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87359A00-634B-29F2-AF6E-CA7076B7A901</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

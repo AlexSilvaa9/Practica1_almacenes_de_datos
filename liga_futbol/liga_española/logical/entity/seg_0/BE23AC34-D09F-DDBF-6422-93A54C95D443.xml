@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BE23AC34-D09F-DDBF-6422-93A54C95D443" name="ARBITRO">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:09:33 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>B4AA3E0D-DEB1-EEA8-4E2E-7EA5869CDCF6</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="internacional" id="FC9DBC14-117E-A6B9-5065-86E3B83F98B8">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:09:41 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="futbolista" id="6B5C4913-2641-E3C7-47E1-3182E3F645E2">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:10:02 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C9BD2B1-BD28-1FFB-8EAD-9D5EF5316CA6" name="EQUIPOS">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:35:42 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nombre" id="F7D3D0F1-39E2-9425-66DB-2DC6A7B6F147">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:35:51 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="n_socios" id="4F27B250-3634-001F-CDDD-0E7B684A1B3A">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:36:16 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Campo" id="CABE7C51-F47B-B4F2-F299-CFE0A340D6CC">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:36:46 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ciudad" id="25FA745D-DE79-73E6-A6AC-8D8128428768">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:39:30 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="año_fundacion" id="D9210475-A92B-00EB-4198-91E27FF44435">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:39:57 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="años_continuados_primera" id="0F94AF61-9AE6-9649-2141-DB12039EF323">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:40:32 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fundador" id="A89EE897-C50F-8FBC-7D07-5CA3DD1C4289">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:41:07 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="333B871C-27FC-B479-E3E9-86EC8DDEA431" name="EQUIPOS PK">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:36:13 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F7D3D0F1-39E2-9425-66DB-2DC6A7B6F147</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

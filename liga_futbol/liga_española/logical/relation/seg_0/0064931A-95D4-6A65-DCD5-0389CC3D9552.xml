@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="equipo-partido" directorySegmentName="seg_0" id="0064931A-95D4-6A65-DCD5-0389CC3D9552">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:11:10 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>participar</nameOnSource>
+<nameOnTarget>ser_jugado</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>1C9BD2B1-BD28-1FFB-8EAD-9D5EF5316CA6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4026A339-80F9-5DCB-847D-32C38F476154</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

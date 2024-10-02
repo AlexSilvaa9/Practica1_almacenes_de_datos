@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="jornada-partido" directorySegmentName="seg_0" id="E318897B-A7B1-988C-5A47-29198729262E">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:55:20 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<sourcePk>2990C806-7D29-1F92-2572-A60ADA909427</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>ser_jornada</nameOnSource>
+<nameOnTarget>pertenece_jornada</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FC30359A-C241-9C4D-704A-4FDE7275E986</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4026A339-80F9-5DCB-847D-32C38F476154</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

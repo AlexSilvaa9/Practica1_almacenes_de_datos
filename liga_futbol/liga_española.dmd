@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="liga_española" id="C16CF181-6070-244E-5A26-8BC305426250" version="3.5">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:27:18 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C16CF181-6070-244E-5A26-8BC305426250</designId>
+</OSDM_Design>

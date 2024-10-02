@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="arbitro" directorySegmentName="seg_0" id="1F124156-2975-148F-E4BC-7140BCA7F75D">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:22:17 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<sourcePk>998CC826-23C1-2A0B-CC3C-CE146710A0F0</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>ser</nameOnSource>
+<nameOnTarget>tener</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BE23AC34-D09F-DDBF-6422-93A54C95D443</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4026A339-80F9-5DCB-847D-32C38F476154</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

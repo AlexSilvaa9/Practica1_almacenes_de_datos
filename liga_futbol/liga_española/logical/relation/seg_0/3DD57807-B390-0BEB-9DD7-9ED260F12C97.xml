@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="juez" directorySegmentName="seg_0" id="3DD57807-B390-0BEB-9DD7-9ED260F12C97">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 09:21:43 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<targetPk>D3B107E8-6E0C-4CEB-CB31-B0B73AD53E89</targetPk>
+<identifying>false</identifying>
+<nameOnSource>ser</nameOnSource>
+<nameOnTarget>tener</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>7EF9A155-31FD-1D7B-0C26-AAE75D118220</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4026A339-80F9-5DCB-847D-32C38F476154</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

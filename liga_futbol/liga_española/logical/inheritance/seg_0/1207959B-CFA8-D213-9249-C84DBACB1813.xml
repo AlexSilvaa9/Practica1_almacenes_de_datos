@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.InheritanceRelation" name="Hierarchy_1" directorySegmentName="seg_0" id="1207959B-CFA8-D213-9249-C84DBACB1813">
+<createdBy>marcu</createdBy>
+<createdTime>2024-09-30 08:46:58 UTC</createdTime>
+<ownerDesignName>liga_española</ownerDesignName>
+<engineerTo>
+<item key="A86550AC-BDAA-2076-FA94-5F88D9A3FE77" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>Super Type</nameOnSource>
+<nameOnTarget>Sub Type</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceEntity>87DA6108-2805-A2FD-8DF5-B826C5D94B79</sourceEntity>
+<targetEntity>482A5445-C35A-9144-24AF-DE4EEF6FB185</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
