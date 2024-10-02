@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  2 OCT 2024 11:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  2 OCT 2024 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,17 +235,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `main.toc'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 115--117
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
@@ -253,7 +253,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--117
 File: images/diagrama_logico_parques_naturales.png Graphic file (type png)
 <use images/diagrama_logico_parques_naturales.png>
 Package pdftex.def Info: images/diagrama_logico_parques_naturales.png  used on 
-input line 122.
+input line 118.
 (pdftex.def)             Requested size: 469.75502pt x 245.00475pt.
 [3 <./images/diagrama_logico_parques_naturales.png>]
 <images/diagrama_relacional_parques_naturales.png, id=27, 770.88pt x 295.1025pt
@@ -261,14 +261,14 @@ input line 122.
 File: images/diagrama_relacional_parques_naturales.png Graphic file (type png)
 <use images/diagrama_relacional_parques_naturales.png>
 Package pdftex.def Info: images/diagrama_relacional_parques_naturales.png  used
- on input line 135.
+ on input line 131.
 (pdftex.def)             Requested size: 469.75502pt x 179.82762pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-43.
+39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
@@ -280,7 +280,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...ar el nombre de los consejeros de Doñana
+l.211 ...ar el nombre de los consejeros de Doñana
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -295,7 +295,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 ...ar el nombre de los consejeros de Doñana
+l.211 ...ar el nombre de los consejeros de Doñana
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -310,7 +310,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219 ...AL_nombre=p.nombre and p.nombre='Doñana'
+l.215 ...AL_nombre=p.nombre and p.nombre='Doñana'
                                                   ;
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -325,7 +325,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.219 ...AL_nombre=p.nombre and p.nombre='Doñana'
+l.215 ...AL_nombre=p.nombre and p.nombre='Doñana'
                                                   ;
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -340,7 +340,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.221 ...ionar el nombre del presidente de Doñana
+l.217 ...ionar el nombre del presidente de Doñana
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -355,7 +355,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.221 ...ionar el nombre del presidente de Doñana
+l.217 ...ionar el nombre del presidente de Doñana
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -370,7 +370,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.225 ....dni=p.PERSONA_dni and p.nombre='Doñana'
+l.221 ....dni=p.PERSONA_dni and p.nombre='Doñana'
                                                   ;
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -385,7 +385,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.225 ....dni=p.PERSONA_dni and p.nombre='Doñana'
+l.221 ....dni=p.PERSONA_dni and p.nombre='Doñana'
                                                   ;
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -400,7 +400,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.227 ...bre de los municipios que abarca doñana 
+l.223 ...bre de los municipios que abarca doñana 
                                                   junto al numero de municip...
 
 The document does not appear to be in UTF-8 encoding.
@@ -416,7 +416,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.227 ...bre de los municipios que abarca doñana 
+l.223 ...bre de los municipios que abarca doñana 
                                                   junto al numero de municip...
 
 The document does not appear to be in UTF-8 encoding.
@@ -432,7 +432,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231 ...QUE_NATURAL_nombre and p.nombre='Doñana'
+l.227 ...QUE_NATURAL_nombre and p.nombre='Doñana'
                                                   ;
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -447,7 +447,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231 ...QUE_NATURAL_nombre and p.nombre='Doñana'
+l.227 ...QUE_NATURAL_nombre and p.nombre='Doñana'
                                                   ;
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -456,36 +456,36 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 237.
+(Font)              <9> on input line 233.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 237.
+(Font)              <6> on input line 233.
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--251
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 264--266
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
 
  []
 
@@ -493,15 +493,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 267--269
 File: images/diagrama_logico_futbol.png Graphic file (type png)
 <use images/diagrama_logico_futbol.png>
 Package pdftex.def Info: images/diagrama_logico_futbol.png  used on input line 
-272.
+268.
 (pdftex.def)             Requested size: 469.75502pt x 202.49362pt.
 [8 <./images/diagrama_logico_futbol.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 280--282
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--285
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
@@ -509,7 +509,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--285
 File: images/diagrama_relacional_futbol.png Graphic file (type png)
 <use images/diagrama_relacional_futbol.png>
 Package pdftex.def Info: images/diagrama_relacional_futbol.png  used on input l
-ine 288.
+ine 284.
 (pdftex.def)             Requested size: 469.75502pt x 201.24423pt.
 [9 <./images/diagrama_relacional_futbol.png>]
 
@@ -519,7 +519,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 	año_fundacion 
+l.301 	año_fundacion 
                       INTEGER ,
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -534,7 +534,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.305 	año_fundacion 
+l.301 	año_fundacion 
                       INTEGER ,
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -549,7 +549,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 	años_continuados_primera 
+l.302 	años_continuados_primera 
                                  INTEGER ,
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -564,7 +564,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 	años_continuados_primera 
+l.302 	años_continuados_primera 
                                  INTEGER ,
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -573,7 +573,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
 
  []
 
@@ -584,7 +584,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.370 ... colegiados (incluyendo jueces de línea)
+l.366 ... colegiados (incluyendo jueces de línea)
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -599,7 +599,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.370 ... colegiados (incluyendo jueces de línea)
+l.366 ... colegiados (incluyendo jueces de línea)
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -614,7 +614,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.373 ...eu', '12345678A', 10, 'Segunda División'
+l.369 ...eu', '12345678A', 10, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -629,7 +629,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.373 ...eu', '12345678A', 10, 'Segunda División'
+l.369 ...eu', '12345678A', 10, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -644,7 +644,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.374 ...ro', '23456789B', 12, 'Segunda División 
+l.370 ...ro', '23456789B', 12, 'Segunda División 
                                                   B', 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -659,7 +659,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.374 ...ro', '23456789B', 12, 'Segunda División 
+l.370 ...ro', '23456789B', 12, 'Segunda División 
                                                   B', 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -674,7 +674,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.375 	(3, 'José 
+l.371 	(3, 'José 
                   Luis Munuera', '34567890C', 8, 'Segunda División', 'ARBIT...
 
 The document does not appear to be in UTF-8 encoding.
@@ -690,7 +690,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.375 	(3, 'José 
+l.371 	(3, 'José 
                   Luis Munuera', '34567890C', 8, 'Segunda División', 'ARBIT...
 
 The document does not appear to be in UTF-8 encoding.
@@ -706,7 +706,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.375 ...era', '34567890C', 8, 'Segunda División'
+l.371 ...era', '34567890C', 8, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -721,7 +721,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.375 ...era', '34567890C', 8, 'Segunda División'
+l.371 ...era', '34567890C', 8, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -736,7 +736,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.376 	(4, 'Alejandro Hernández'
+l.372 	(4, 'Alejandro Hernández'
                                  , '45678901D', 9, 'Segunda División', 'ARB...
 
 The document does not appear to be in UTF-8 encoding.
@@ -752,7 +752,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.376 	(4, 'Alejandro Hernández'
+l.372 	(4, 'Alejandro Hernández'
                                  , '45678901D', 9, 'Segunda División', 'ARB...
 
 The document does not appear to be in UTF-8 encoding.
@@ -768,7 +768,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.376 ...dez', '45678901D', 9, 'Segunda División'
+l.372 ...dez', '45678901D', 9, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -783,7 +783,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.376 ...dez', '45678901D', 9, 'Segunda División'
+l.372 ...dez', '45678901D', 9, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -798,7 +798,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 	(5, 'Jesús 
+l.373 	(5, 'Jesús 
                    Gil Manzano', '56789012E', 11, 'Segunda División', 'ARBI...
 
 The document does not appear to be in UTF-8 encoding.
@@ -814,7 +814,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 	(5, 'Jesús 
+l.373 	(5, 'Jesús 
                    Gil Manzano', '56789012E', 11, 'Segunda División', 'ARBI...
 
 The document does not appear to be in UTF-8 encoding.
@@ -830,7 +830,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 ...no', '56789012E', 11, 'Segunda División'
+l.373 ...no', '56789012E', 11, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -845,7 +845,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 ...no', '56789012E', 11, 'Segunda División'
+l.373 ...no', '56789012E', 11, 'Segunda División'
                                                   , 'ARBITRO'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -860,7 +860,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.378 	(6, 'Luis Martínez'
+l.374 	(6, 'Luis Martínez'
                            , '67890123F', 7, 'Segunda División', 'JUEZ_LINE...
 
 The document does not appear to be in UTF-8 encoding.
@@ -876,7 +876,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.378 	(6, 'Luis Martínez'
+l.374 	(6, 'Luis Martínez'
                            , '67890123F', 7, 'Segunda División', 'JUEZ_LINE...
 
 The document does not appear to be in UTF-8 encoding.
@@ -892,7 +892,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.378 ...nez', '67890123F', 7, 'Segunda División'
+l.374 ...nez', '67890123F', 7, 'Segunda División'
                                                   , 'JUEZ_LINEA'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -907,7 +907,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.378 ...nez', '67890123F', 7, 'Segunda División'
+l.374 ...nez', '67890123F', 7, 'Segunda División'
                                                   , 'JUEZ_LINEA'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -922,7 +922,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.379 	(7, 'Javier López'
+l.375 	(7, 'Javier López'
                           , '78901234G', 6, 'Segunda División', 'JUEZ_LINEA'),
 
 The document does not appear to be in UTF-8 encoding.
@@ -938,7 +938,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.379 	(7, 'Javier López'
+l.375 	(7, 'Javier López'
                           , '78901234G', 6, 'Segunda División', 'JUEZ_LINEA'),
 
 The document does not appear to be in UTF-8 encoding.
@@ -954,7 +954,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.379 ...pez', '78901234G', 6, 'Segunda División'
+l.375 ...pez', '78901234G', 6, 'Segunda División'
                                                   , 'JUEZ_LINEA'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -969,7 +969,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.379 ...pez', '78901234G', 6, 'Segunda División'
+l.375 ...pez', '78901234G', 6, 'Segunda División'
                                                   , 'JUEZ_LINEA'),
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -984,7 +984,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.380 	(8, 'Fernando Díaz'
+l.376 	(8, 'Fernando Díaz'
                            , '89012345H', 5, 'Segunda División', 'JUEZ_LINE...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1000,7 +1000,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.380 	(8, 'Fernando Díaz'
+l.376 	(8, 'Fernando Díaz'
                            , '89012345H', 5, 'Segunda División', 'JUEZ_LINE...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1016,7 +1016,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.380 ...�az', '89012345H', 5, 'Segunda División'
+l.376 ...�az', '89012345H', 5, 'Segunda División'
                                                   , 'JUEZ_LINEA');
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1031,7 +1031,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.380 ...�az', '89012345H', 5, 'Segunda División'
+l.376 ...�az', '89012345H', 5, 'Segunda División'
                                                   , 'JUEZ_LINEA');
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1046,7 +1046,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.382 	-- Inserción 
+l.378 	-- Inserción 
                      de arbitros
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1061,7 +1061,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.382 	-- Inserción 
+l.378 	-- Inserción 
                      de arbitros
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1070,7 +1070,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 393--395
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
 
  []
 
@@ -1081,7 +1081,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.401 ... (DNI, Apodo, puesto, años_fin_contrato,
+l.397 ... (DNI, Apodo, puesto, años_fin_contrato,
                                                    cuantia_clausula, n_años...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1097,7 +1097,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.401 ... (DNI, Apodo, puesto, años_fin_contrato,
+l.397 ... (DNI, Apodo, puesto, años_fin_contrato,
                                                    cuantia_clausula, n_años...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1113,7 +1113,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.401 ..._fin_contrato, cuantia_clausula, n_años,
+l.397 ..._fin_contrato, cuantia_clausula, n_años,
                                                    PARTIDO_JORNADA_numero, E...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1129,7 +1129,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.401 ..._fin_contrato, cuantia_clausula, n_años,
+l.397 ..._fin_contrato, cuantia_clausula, n_años,
                                                    PARTIDO_JORNADA_numero, E...
 
 The document does not appear to be in UTF-8 encoding.
@@ -1139,7 +1139,7 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
 
  []
 
@@ -1150,7 +1150,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 ...ipo de los colegiados con mas de 6 años 
+l.421 ...ipo de los colegiados con mas de 6 años 
                                                   de antiguedad
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1165,7 +1165,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 ...ipo de los colegiados con mas de 6 años 
+l.421 ...ipo de los colegiados con mas de 6 años 
                                                   de antiguedad
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1200,13 +1200,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-
-LaTeX Warning: Command \' invalid in math mode on input line 20.
-
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.21 
+l.20 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1214,7 +1211,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.21 
+l.20 
      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1222,12 +1219,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-Missing character: There is no � in font cmr10!
 
-Overfull \hbox (91.56187pt too wide) in paragraph at lines 16--21
+Overfull \hbox (33.61035pt too wide) in paragraph at lines 16--20
 []\T1/cmr/m/n/10 Alex Sil-va.  Prac-ti-ca1_almacenes_de_datos.  https://github.
 com/AlexSilvaa9/Practica1$[]\OML/cmm/m/it/10 lmacenes[]e[]atos; \OT1/cmr/m/n/10
- 2024\OML/cmm/m/it/10 : ltimoacceso \OT1/cmr/m/n/10 :
+ 2024\OML/cmm/m/it/10 :[]$ 
  []
 
 ) [14] (./main.aux
@@ -1235,10 +1231,10 @@ LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
- 5745 strings out of 476091
- 86124 string characters out of 5794081
+ 5744 strings out of 476091
+ 86101 string characters out of 5794081
  2245330 words of memory out of 5000000
- 26074 multiletter control sequences out of 15000+600000
+ 26073 multiletter control sequences out of 15000+600000
  525350 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,62p,979b,1727s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1254,7 +1250,7 @@ m-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb
 onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on main.pdf (15 pages, 1649667 bytes).
+Output written on main.pdf (15 pages, 1647157 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
